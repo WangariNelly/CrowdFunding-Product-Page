@@ -1,0 +1,212 @@
+@import url('https://fonts.google.com/specimen/Commissioner');
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+
+.container{ 
+    font-size: 16px;
+    font-family: "Commissioner", sans-serif;
+    display: flex;
+    justify-content: center;
+    /* background-color: red; */
+  }
+
+  .background-image{
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 340px;
+    z-index: -1;
+  }
+  .background-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+ .menu ul li{
+  list-style-type: none;
+  display: inline-block;
+  padding: 10px;
+  color: white;
+}
+
+.page1{
+     width: 100%;
+     max-width: 1200px;
+    margin: 50px 10px;
+    margin-top:15rem;
+    margin-right:10rem;
+    /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
+    border-radius: 1rem;
+    padding: 1rem;
+}
+.Intro .image{
+  padding-left: 10rem;
+  margin-bottom: 1.5rem;
+  position: relative;
+} 
+
+.Intro{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+}
+.Intro h1{
+  padding-left: 6rem;
+  font-weight: 800;
+}
+.Intro p{
+  padding-left: 2rem;
+  color: grey;
+}
+
+.buttondiv{
+    display: flex;
+    justify-content: space-between;
+   padding: 10px;
+   margin-top: 1rem;
+   padding-bottom: 2rem;
+}
+.Intro .button1{
+  padding: 15px 25px;
+    border-radius: 40px;
+    color: white;
+    border: transparent;
+    background-color: aqua;
+}
+
+.Intro .button2{
+  padding: 15px 25px;
+    border-radius: 40px;
+    color: white;
+    border: transparent;
+    background-color: grey;
+}
+
+
+.stats{
+  margin-top: 1rem;
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-bottom: 2rem;
+}
+.backers{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem;
+}
+.backers p{
+  color: grey;
+}
+.file {
+
+  height: 10px;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: rgb(253, 253, 253);
+  border-radius: 10px;
+}
+
+.file::-webkit-progress-value {
+  background-color: aqua;
+  border-radius: 10px;
+}
+.progressbar{
+  padding: 1rem;
+}
+
+.About-project{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+}
+
+.About p{
+      color: grey;
+      padding: 1rem;
+}
+
+.Bamboo-pledge{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.Black-edition{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+
+.Mahogany-edition{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.editions{
+  padding: 2rem;
+}
+
+.editions p{
+  color: grey;
+}
+
+.About-project .heading3{
+  padding: 1rem;
+}
+.About-project span{
+ display: flex;
+ padding: 1rem;
+ justify-content: space-between;
+}
+
+
+.pledge{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  padding: 1rem;
+}
+.button{
+  padding: 15px 25px;
+  border-radius: 40px;
+  color: white;
+  border: transparent;
+  background-color: aqua;
+}
+
+
+  .modal {
+    padding: 3em;
+    max-width: 50ch;
+    border: 0;
+    box-shadow: 0 0 1em rgb(0 0 0 / .3);
+  
+    & > * {
+      margin: 1rem 0 3rem 2rem;
+    }
+  }
+.modal::backdrop {
+  background: rgb(0 0 0 / 0.4);
+}
