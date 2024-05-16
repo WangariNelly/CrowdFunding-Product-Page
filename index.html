@@ -12,14 +12,14 @@
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
+
 <body>
-  <div class="container">
   <div class="background-image">
     <img src="images/image-hero-desktop.jpg" alt="" />
   </div>
   <div>
     <header class="header">
-    <div>  <img src="./images/logo.svg" alt="logo"></div>
+    <div>  <img class="logo" src="./images/logo.svg" alt="logo"></div>
       <div class="menu">
         <ul>
           <li>About</li>
@@ -37,17 +37,17 @@
   <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.
   </p> 
   <div class="buttondiv">
-    <button class="button1">Back this project</button>
-    <button class="button2">Bookmark</button></div>
+    <button class="button1"><strong>Back this project</strong></button>
+    <button class="button2"><strong>Bookmark</strong></button></div>
 </div>
 <section class="stats">
 <div class="backers">  
-  <div><h2>$89,914</h2> 
+  <div id="griddivs"><h2>$89,914</h2> 
     <p>of $100,000 backed</p></div>
-    <div> <h2>5,007</h2><p>total backers</p></div>
-<div><h2>56</h2><p>days left</p></div>
-<div class="progressbar" ><progress class="file" id="file" value="70" max="100"> 70% </progress></div>
+    <div id="griddivs"> <h2>5,007</h2><p>total backers</p></div>
+<div id="griddivs"><h2>56</h2><p>days left</p></div>
 </div>
+<div class="progressbar" ><progress class="file" id="file" value="70" max="100"> 70% </progress></div>
 </section>
 
 <section class="About-project">
@@ -64,26 +64,26 @@
 </div>
 <div class="editions">
   <div class="Bamboo-pledge">
-   <div class="pledge"><h3>Bamboo Stand</h3><p>Pledge $25 or more</p></div> 
+   <div class="pledge"><h3>Bamboo Stand</h3><p id="pledgespan">Pledge $25 or more</p></div> 
    
     <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
       you’ll be added to a special Backer member list.</p>
-  <span><h3>101</h3><p>left</p><button class="button">Select Reward</button></span> 
+  <span><div><h3>101</h3><p>left</p></div><button class="button">Select Reward</button></span> 
   </div>
  
 <div class="Black-edition">
-  <div class="pledge"><h3>Black Edition Stand</h3><p>Pledge $75 or more</p></div>
+  <div class="pledge"><h3>Black Edition Stand</h3><p id="pledgespan">Pledge $75 or more</p></div>
   <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
     member list. Shipping is included.</p>
-  <span><h3>64</h3><p>left</p><button class="button" >Select Reward</button></span>
+  <span><div><h3>64</h3><p>left</p></div><button class="button" >Select Reward</button></span>
 </div>
  
 <div class="Mahogany-edition">
- <div class="pledge"><h3>Mahogany Special Edition</h3><p>Pledge $200 or more</p></div> 
+ <div class="pledge"><h3>Mahogany Special Edition</h3><p id="pledgespan">Pledge $200 or more</p></div> 
 
   <p>You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
     to our Backer member list. Shipping is included.</p>
-  <span><h3>0</h3><p>left</p><button class="button">Out of Stock</button></span>
+  <span><div><h3>0</h3><p>left</p></div><button class="button inactive">Out of Stock</button></span>
 </div>
 </div>
 </section>
@@ -91,7 +91,7 @@
 
 <section>
   <!-- Selection modal start -->
-  <dialog  class="modal" id="modal">
+  <dialog class="modal" id="modal">
 <div class="modal">
   <h2>Back this project</h2>
   <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
@@ -150,6 +150,6 @@
 </div>
 </dialog>
   <!-- Success modal end -->
-</div>
 </body>
+
 </html>

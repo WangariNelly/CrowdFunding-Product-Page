@@ -6,13 +6,11 @@
     padding: 0;
     text-decoration: none;
   }
-
-.container{ 
+  body{
+    max-width: 100vw;
     font-size: 16px;
     font-family: "Commissioner", sans-serif;
-    display: flex;
-    justify-content: center;
-    /* background-color: red; */
+    /* background-color: green; */
   }
 
   .background-image{
@@ -22,7 +20,7 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 340px;
+    height: 400px;
     z-index: -1;
   }
   .background-image img{
@@ -35,26 +33,36 @@
     justify-content: space-between;
     align-items: center;
   }
-  
+
  .menu ul li{
   list-style-type: none;
   display: inline-block;
-  padding: 10px;
+  padding: 1rem;
   color: white;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.menu ul{
+ margin-right: 15rem;
+ margin-top: 5rem
+}
+.logo{
+ margin-left: 15rem;
+ margin-top: 5rem;
 }
 
 .page1{
      width: 100%;
-     max-width: 1200px;
-    margin: 50px 10px;
-    margin-top:15rem;
-    margin-right:10rem;
+     max-width: 900px;
+     margin-top:20rem;
     /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
     border-radius: 1rem;
-    padding: 1rem;
+    font-size: 16px;
+    margin-left: 35rem;
 }
 .Intro .image{
-  padding-left: 10rem;
+  padding-left: 29rem;
   margin-bottom: 1.5rem;
   position: relative;
 } 
@@ -67,29 +75,33 @@
 .Intro h1{
   padding-left: 6rem;
   font-weight: 800;
+  font-size: 40px;
 }
 .Intro p{
-  padding-left: 2rem;
+  padding-left: 4rem;
   color: grey;
+  font-size: 16px;
 }
 
 .buttondiv{
     display: flex;
     justify-content: space-between;
    padding: 10px;
-   margin-top: 1rem;
+   margin-top: 2rem;
    padding-bottom: 2rem;
+   margin: 2rem;
+
 }
 .Intro .button1{
-  padding: 15px 25px;
+  padding: 15px 30px;
     border-radius: 40px;
     color: white;
     border: transparent;
-    background-color: aqua;
+    background-color: hsl(176, 50%, 47%);
 }
 
 .Intro .button2{
-  padding: 15px 25px;
+  padding: 15px 30px;
     border-radius: 40px;
     color: white;
     border: transparent;
@@ -98,24 +110,31 @@
 
 
 .stats{
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
 .backers{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  padding: 2rem;
+
+}
+.backers h2{
+  font-size: 35px;
 }
 .backers p{
   color: grey;
+  font-size: 16px ;
+}
+
+#griddivs{
+  padding: 2rem;
 }
 .file {
-
+  width: 60rem;
   height: 10px;
-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -124,7 +143,7 @@
 }
 
 .file::-webkit-progress-value {
-  background-color: aqua;
+  background-color: hsl(176, 50%, 47%);
   border-radius: 10px;
 }
 .progressbar{
@@ -140,6 +159,7 @@
 .About p{
       color: grey;
       padding: 1rem;
+      font-size: 16px;
 }
 
 .Bamboo-pledge{
@@ -172,6 +192,10 @@
   color: grey;
 }
 
+.editions h3{
+  font-size: 25px;
+}
+
 .About-project .heading3{
   padding: 1rem;
 }
@@ -188,12 +212,24 @@
   gap: 2rem;
   padding: 1rem;
 }
+.pledge #pledgespan{
+  color: hsl(176, 50%, 47%);
+  text-align: end;
+}
 .button{
   padding: 15px 25px;
   border-radius: 40px;
   color: white;
   border: transparent;
-  background-color: aqua;
+  background-color: hsl(176, 50%, 47%);
+}
+
+.inactive{
+  padding: 15px 25px;
+  border-radius: 40px;
+  color: white;
+  border: transparent;
+  background-color: hsl(0, 0%, 48%);
 }
 
 
