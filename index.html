@@ -32,13 +32,15 @@
   <section class="page1">
 <div class="Intro">
   <div class="image"><img src="./images/logo-mastercraft.svg" alt="" id="mastercraft"></div>
-  
+  <div>
   <h1>Mastercraft Bamboo Monitor Riser</h1>
   <p>A beautiful & handcrafted monitor stand to reduce neck and eye strain.
   </p> 
+  </div>
   <div class="buttondiv">
-    <button class="button1"><strong>Back this project</strong></button>
-    <button class="button2"><strong>Bookmark</strong></button></div>
+    <button class="button1" id="openModal"><strong>Back this project</strong></button>
+    <button class="button2"><img src="images/icon-bookmark.svg" alt=""><span>Bookmark</span></button>
+</div>
 </div>
 <section class="stats">
 <div class="backers">  
@@ -47,6 +49,7 @@
     <div id="griddivs"> <h2>5,007</h2><p>total backers</p></div>
 <div id="griddivs"><h2>56</h2><p>days left</p></div>
 </div>
+
 <div class="progressbar" ><progress class="file" id="file" value="70" max="100"> 70% </progress></div>
 </section>
 
@@ -91,65 +94,66 @@
 
 <section>
   <!-- Selection modal start -->
-  <dialog class="modal" id="modal">
-<div class="modal">
+  <div class="page1 modal" id="modal">
+<div class="modal-wrapper" id="modalWrapper">
+  <img  class="close" id="close" src="./images/icon-close-modal.svg" alt="">
   <h2>Back this project</h2>
   <p>Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
-</div>
-  <div>
-    <input type="radio"><label> Pledge with no reward</label>
+
+  <div class="pledge--modal" id="noReward">
+    <label><input type="radio"><strong> Pledge with no reward</strong></label>
   <p>Choose to support us without a reward if you simply believe in our project. As a backer, 
     you will be signed up to receive product updates via email.</p>
   </div>
-  <div class="Bamboo-pledge">
-    <span><input type="radio"><label> Bamboo stand</label><p>Pledge $25 or more</p> <p>101 left</p></span>
+  <div class="Bamboo-pledge--modal">
+    <span><input type="radio"><label><strong> Bamboo stand</strong></label><p>Pledge $25 or more</p> <p>101 left</p></span>
     <p>You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and
       you’ll be added to a special Backer member list.</p>
-  </div>
-<section class="selection-pledge">
   <!-- Selected pledge start -->
   Enter your pledge
   $25
-  Continue
+  <button class="button" id="continueBtn">Continue</button>
+</div>
   <!-- Selected pledge end -->
-
-  Black Edition Stand
-  Pledge $75 or more
-  You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
-  member list. Shipping is included.
-  64 left
-
+  <div class="Black-edition--modal">
+    <span><input type="radio"><label><strong> Black Edition Stand</strong></label><p>Pledge $75 or more</p> <p>64 left</p></span>
+    <p>You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer
+      member list. Shipping is included.</p>
   <!-- Selected pledge start -->
-  Enter your pledge
-  $75
-  Continue
+  <p>Enter your pledge $75 </p><button class="button" id="continueBtn">Continue</button>
+</div>
   <!-- Selected pledge end -->
+  <div class="Mahogany-edition--modal">
+    <span><input type="radio"><label><strong> Mahogany Special Edition</strong></label><p>Pledge $200 or more</p> <p>0 left</p></span>
+    <p>Y You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+      to our Backer member list. Shipping is included.</p>
+      $200
+     <button class="button" id="continueBtn">Continue</button> 
+    </div>
+  </div>
+</div>
 
-  Mahogany Special Edition
-  Pledge $200 or more
-  You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added
-  to our Backer member list. Shipping is included.
-  0 left
-
-  <!-- Selected pledge  start -->
+  <!-- Selected pledge  start
   Enter your pledge
   $200
   Continue
 
-  <!-- Selected pledge end -->
-</section>
-  <!-- Selection modal end -->
-</dialog>
-  <!-- Success modal start -->
-<dialog class="modal">
-  <div class="modal-wrapper">
-  Thanks for your support!
-  Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
-  an email once our campaign is completed.
-  Got it!
-</div>
-</dialog>
-  <!-- Success modal end -->
-</body>
+  Selected pledge end -->
 
+  <!-- Selection modal end -->
+
+  <!-- Success modal start -->
+  <div class="thankyou--modal" id="thankyou">
+    <div class="thanksmodal-wrapper">
+      <img src="./images/icon-check.svg" alt="">
+  <h3>Thanks for your support!</h3>
+  <p>Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get
+    an email once our campaign is completed.</p>
+ <button class="button" id="closeThankyou">Got it!</button> 
+</div>
+</div>
+</section>
+  <!-- Success modal end -->
+<script src="./index.js"></script>
+</body>
 </html>

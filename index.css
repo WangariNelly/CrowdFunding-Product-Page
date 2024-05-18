@@ -7,10 +7,13 @@
     text-decoration: none;
   }
   body{
-    max-width: 100vw;
     font-size: 16px;
     font-family: "Commissioner", sans-serif;
     /* background-color: green; */
+  }
+
+  body .fixed{
+    overflow: hidden;
   }
 
   .background-image{
@@ -54,7 +57,7 @@
 
 .page1{
      width: 100%;
-     max-width: 900px;
+     max-width: 1000px;
      margin-top:20rem;
     /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
     border-radius: 1rem;
@@ -71,6 +74,7 @@
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
+  margin-bottom: 1rem;
 }
 .Intro h1{
   padding-left: 6rem;
@@ -84,12 +88,13 @@
 }
 
 .buttondiv{
-    display: flex;
-    justify-content: space-between;
+   display: flex;
+  justify-content: space-between;
    padding: 10px;
    margin-top: 2rem;
    padding-bottom: 2rem;
    margin: 2rem;
+   height: 60px;
 
 }
 .Intro .button1{
@@ -100,17 +105,34 @@
     background-color: hsl(176, 50%, 47%);
 }
 
+.Intro .button1:hover{
+   cursor: pointer;
+   background-color: hsl(176, 72%, 28%);
+}
+
 .Intro .button2{
-  padding: 15px 30px;
+  padding: 10px px;
     border-radius: 40px;
     color: white;
     border: transparent;
-    background-color: grey;
+    background-color: grey
+  
+}
+.Intro .button2:hover{
+  cursor: pointer;
+  background-color: lightgray
+}
+.button2 span{
+  margin-right: 10px;
 }
 
-
+.button2 img {
+  margin-right: 5px; 
+  vertical-align: middle; 
+  width: auto;
+  height: 100%; 
+}
 .stats{
-  margin-top: 0.5rem;
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
@@ -132,22 +154,23 @@
 #griddivs{
   padding: 2rem;
 }
-.file {
-  width: 60rem;
+.progressbar progress {
+  width: 100%;
   height: 10px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background-color: rgb(253, 253, 253);
+  background-color: #ddd; 
   border-radius: 10px;
+}
+.progressbar progress::-webkit-progress-bar {
+  background-color: #ddd; 
+  border-radius: 10px; 
+}
+.progressbar progress::-webkit-progress-value {
+  background-color: cyan;
+  border-radius: 10px; 
 }
 
-.file::-webkit-progress-value {
-  background-color: hsl(176, 50%, 47%);
-  border-radius: 10px;
-}
 .progressbar{
-  padding: 1rem;
+  padding: 2rem;
 }
 
 .About-project{
@@ -180,7 +203,7 @@
 .Mahogany-edition{
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
-  background-color: white;
+ background-color: white;
   margin-top: 2rem;
 }
 
@@ -223,7 +246,10 @@
   border: transparent;
   background-color: hsl(176, 50%, 47%);
 }
-
+.button:hover{
+cursor: pointer;
+background-color: hsl(176, 72%, 28%);
+}
 .inactive{
   padding: 15px 25px;
   border-radius: 40px;
@@ -232,17 +258,84 @@
   background-color: hsl(0, 0%, 48%);
 }
 
-
-  .modal {
-    padding: 3em;
-    max-width: 50ch;
-    border: 0;
-    box-shadow: 0 0 1em rgb(0 0 0 / .3);
-  
-    & > * {
-      margin: 1rem 0 3rem 2rem;
-    }
-  }
-.modal::backdrop {
-  background: rgb(0 0 0 / 0.4);
+/*modal selections*/
+.pledge--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
 }
+
+.pledge--modal p{
+ padding: 1rem;
+ color: grey;
+}
+
+.Bamboo-pledge--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.Bamboo-pledge--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+.Black-edition--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+.Black-edition--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+.Mahogany-edition--modal{
+  box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
+  border-radius: 0.5rem;
+  background-color: white;
+  margin-top: 2rem;
+}
+.Mahogany-edition--modal p{
+  padding: 1rem;
+  color: grey;
+ }
+
+   .modal, .thankyou--modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width:100%;
+    height: 200%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.1); 
+   }
+   .modal-wrapper, .thanksmodal-wrapper{
+    background-color: white;
+    margin: auto auto;
+    width: 50%;
+    border-radius: 5px;
+   }
+
+   .thanksmodal-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 450px;
+    padding: 10px;
+    margin-top: 10rem;
+   }
+   .close{
+    float: right;
+    cursor: pointer;
+    padding-right: 2rem;
+   }
