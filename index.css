@@ -9,11 +9,21 @@
   body{
     font-size: 16px;
     font-family: "Commissioner", sans-serif;
-    /* background-color: green; */
   }
 
-  body .fixed{
+  body.fixed{
     overflow: hidden;
+  }
+
+  .container{
+       max-width: 1200px;
+       width: 100%;
+       /* display: flex;
+       justify-content: center;
+       align-items: center; */
+       flex-direction: column;
+       z-index: 1;
+       margin: auto;
   }
 
   .background-image{
@@ -47,42 +57,44 @@
 }
 
 .menu ul{
- margin-right: 15rem;
  margin-top: 5rem
 }
 .logo{
- margin-left: 15rem;
  margin-top: 5rem;
 }
 
 .page1{
      width: 100%;
-     max-width: 1000px;
      margin-top:20rem;
     /* box-shadow: 0 0 1em rgb(0 0 0 / .3); */
     border-radius: 1rem;
     font-size: 16px;
-    margin-left: 35rem;
+    /* margin-left: 35rem; */
 }
-.Intro .image{
-  padding-left: 29rem;
-  margin-bottom: 1.5rem;
-  position: relative;
-} 
-
+ 
 .Intro{
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
-  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
+
+#mastercraft{
+  transform: translateX(-50%);
+  position: relative;
+  top: -30px;
+
+}
+
 .Intro h1{
-  padding-left: 6rem;
+  padding-left: 4rem;
   font-weight: 800;
   font-size: 40px;
 }
 .Intro p{
-  padding-left: 4rem;
   color: grey;
   font-size: 16px;
 }
@@ -90,7 +102,6 @@
 .buttondiv{
    display: flex;
   justify-content: space-between;
-   padding: 10px;
    margin-top: 2rem;
    padding-bottom: 2rem;
    margin: 2rem;
@@ -98,7 +109,7 @@
 
 }
 .Intro .button1{
-  padding: 15px 30px;
+    padding: 15px 30px;
     border-radius: 40px;
     color: white;
     border: transparent;
@@ -111,7 +122,7 @@
 }
 
 .Intro .button2{
-  padding: 10px px;
+  padding: 10px;
     border-radius: 40px;
     color: white;
     border: transparent;
@@ -136,7 +147,7 @@
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
-  margin-bottom: 0.5rem;
+  margin: 2rem 0;
 }
 .backers{
   display: grid;
@@ -313,13 +324,13 @@ background-color: hsl(176, 72%, 28%);
     left: 0;
     top: 0;
     width:100%;
-    height: 200%;
+    height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.1); 
+    background-color: rgba(0,0,0,0.5); 
    }
    .modal-wrapper, .thanksmodal-wrapper{
     background-color: white;
-    margin: auto auto;
+    margin: 10% auto;
     width: 50%;
     border-radius: 5px;
    }
