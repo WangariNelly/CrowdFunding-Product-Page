@@ -102,8 +102,9 @@
 .buttondiv{
    display: flex;
   justify-content: space-between;
+  column-gap: 50rem;
    margin-top: 2rem;
-   padding-bottom: 2rem;
+   padding-bottom: 1rem;
    margin: 2rem;
    height: 60px;
 
@@ -122,7 +123,7 @@
 }
 
 .Intro .button2{
-  padding: 10px;
+    padding: 10px 30px;
     border-radius: 40px;
     color: white;
     border: transparent;
@@ -216,6 +217,7 @@
   border-radius: 0.5rem;
  background-color: white;
   margin-top: 2rem;
+  opacity: 50%;
 }
 
 .editions{
@@ -270,11 +272,29 @@ background-color: hsl(176, 72%, 28%);
 }
 
 /*modal selections*/
+.modalHeader{
+  padding: 3rem 1rem 0 1rem;
+}
+
+.modalHeader p{
+  padding: 1rem 1rem 0 0;
+}
+
 .pledge--modal{
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+}
+
+.pledge--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.pledge--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
 }
 
 .pledge--modal p{
@@ -287,6 +307,17 @@ background-color: hsl(176, 72%, 28%);
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+  padding: 1rem;
+}
+
+.Bamboo-pledge--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.Bamboo-pledge--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
 }
 
 .Bamboo-pledge--modal p{
@@ -301,6 +332,16 @@ background-color: hsl(176, 72%, 28%);
   margin-top: 2rem;
 }
 
+.Black-edition--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+
+.Black-edition--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
+}
+
 .Black-edition--modal p{
   padding: 1rem;
   color: grey;
@@ -311,6 +352,15 @@ background-color: hsl(176, 72%, 28%);
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+}
+
+.Mahogany-edition--modal:hover{
+  cursor:pointer;
+  border: solid 3px hsl(176, 72%, 28%);
+}
+.Mahogany-edition--modal h3:hover{
+  cursor:pointer;
+  color: hsl(176, 72%, 28%);
 }
 .Mahogany-edition--modal p{
   padding: 1rem;
@@ -348,5 +398,5 @@ background-color: hsl(176, 72%, 28%);
    .close{
     float: right;
     cursor: pointer;
-    padding-right: 2rem;
+    padding: 1rem 2rem 0 0;
    }
