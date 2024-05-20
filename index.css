@@ -26,6 +26,17 @@
        margin: auto;
   }
 
+  .container p {
+    color: #777777;
+    font-family: 'Commissioner', sans-serif;
+    font-weight: 400;
+    /* text-align: center; */
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    padding-left: 1rem;
+  }
+
   .background-image{
     background-size: contain;
     background-repeat: no-repeat;
@@ -96,10 +107,10 @@
 }
 .Intro p{
   color: grey;
-  font-size: 16px;
+ text-align: center;
 }
 
-.buttondiv{
+/* .buttondiv{
    display: flex;
   justify-content: space-between;
   column-gap: 50rem;
@@ -122,20 +133,76 @@
    background-color: hsl(176, 72%, 28%);
 }
 
-.Intro .button2{
+ .Intro .button2{
     padding: 10px 30px;
     border-radius: 40px;
     color: white;
     border: transparent;
-    background-color: grey
-  
-}
+    background-color: #3ab5aa;
+ }
+
 .Intro .button2:hover{
   cursor: pointer;
   background-color: lightgray
 }
 .button2 span{
   margin-right: 10px;
+} */
+
+.Intro .buttondiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2em;
+  width: 30%;
+  padding: 1rem 0 1.5rem 0;
+}
+
+.Intro .buttondiv button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 40px;
+}
+  .Intro .buttondiv button:first-child{
+  border: none;
+  color: #fff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 0.8rem;
+  width: 70%;
+  padding: 1.5em;
+  background-color: #3ab5aa;
+}
+
+.Intro .buttondiv button button:last-child {
+  width: auto;
+  background-color: transparent;
+}
+
+.Intro .buttondiv button span {
+  display: block;
 }
 
 .button2 img {
@@ -177,7 +244,7 @@
   border-radius: 10px; 
 }
 .progressbar progress::-webkit-progress-value {
-  background-color: cyan;
+  background-color: hsl(176, 72%, 28%);
   border-radius: 10px; 
 }
 
@@ -395,8 +462,145 @@ background-color: hsl(176, 72%, 28%);
     padding: 10px;
     margin-top: 10rem;
    }
-   .close{
+
+   .closebtn{
     float: right;
     cursor: pointer;
     padding: 1rem 2rem 0 0;
    }
+
+/* mobile devices*/
+@media (max-width: 768px) {
+  .background-image{
+    background-image: url(./images/image-hero-mobile.jpg);
+    height: 250px
+  }
+
+.container {
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+}
+
+.menu ul {
+  margin-top: 0; 
+  display: flex;
+flex-direction: column;
+}
+
+.logo {
+  margin-top: 0;
+}
+
+.page1 {
+  width: 100%;
+  margin-top: 10rem;
+}
+
+.Intro .buttondiv {
+  flex-direction: row; 
+  align-items: center; 
+  gap: 1rem; 
+  width: 80%;
+  padding: 1rem 0;
+}
+
+.Intro .buttondiv button {
+  width: 80%;
+}
+
+.backers {
+  grid-template-columns: 1fr;
+
+}
+
+#griddivs {
+  padding-bottom: 2rem;
+  margin-left: 5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#griddivs p{
+  padding: 0;
+  margin-top: 1rem;
+}
+.Bamboo-pledge {
+  margin-top: 2rem;
+}
+
+.Black-edition {
+  margin-top: 2rem; 
+}
+
+.Mahogany-edition {
+  margin-top: 2rem; 
+}
+
+.editions {
+  padding: 1rem; 
+}
+
+.About-project .heading3 {
+  padding: 1rem;
+}
+
+.pledge {
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 1rem; 
+}
+
+ .thanksmodal-wrapper {
+    width: 80%; 
+  }
+
+/*menu*/
+ .container{
+  position: relative;
+
+ }
+
+ .menu {
+  position: absolute;
+  top: 0;
+  right: 0; 
+  background-color: white; 
+  list-style: none; 
+  padding: 0;
+  margin: 2rem 2rem; 
+  display: none; 
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+} 
+
+.menu.active { 
+  display: block; 
+}
+
+.menu li {
+  padding: 1rem;
+}
+
+.menu a {
+  text-decoration: none; 
+  color: #333;
+}
+
+.open {
+  width: 40px; /* Set a width for the icon */
+  height: 40px; /* Set a height for the icon */
+  position: absolute; /* Position the icon absolutely within container (optional) */
+  top: 1rem; /* Add some top padding for spacing */
+  right: 1rem; /* Add some right padding for spacing */
+  cursor: pointer; /* Set cursor to pointer on hover */
+  /* Add your desired styles for the hamburger icon (lines, color, etc.) */
+}
+.close {
+  display: block;
+}
+
+.menu.active .close {
+  /* Styles for the close menu icon when menu is active (replace with your styles) */
+  display: block;
+}
+}
