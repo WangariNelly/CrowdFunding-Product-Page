@@ -11,6 +11,9 @@ let bookmark_text = document.querySelector(".bookmark");
 const closeMenu = document.getElementById("close_Menu");
 const menuToggle = document.getElementById("menuToggle");
 const menuHamburger = document.getElementById("menuHamburger");
+const radioButton = document.getElementsByName("inputName");
+const labelModal = document.getElementsByClassName("label--modal");
+
 
 //opens the modal
 openModal.onclick = function () {
@@ -40,47 +43,29 @@ gotIt.onclick = function () {
 let bookmarked = false;
 
 bookmark.addEventListener("click", () => {
+  console.log('bookmarked')
   bookmarked = !bookmarked;
   bookmarked
     ? (bookmark_text.innerText = "Bookmarked")
     : (bookmark_text.innerText = "Bookmark");
 });
 
- function createPledgeInput() {
-  const label = document.createElement('label');
-  const labelText = document.createTextNode('Enter your pledge');
-  const input = document.createElement('input');
+ 
 
-  label.appendChild(labelText);
-  label.classList.add('hidden');  input.type = 'number';
-  input.id = 'pledgeAmount';
-  input.placeholder = '$ 25';
-  input.classList.add('hidden');  
-  
-  const container = document.getElementById('pledge-no--reward');
-  container.appendChild(label);
-  label.appendChild(input);
+//radio buttons functionality
 
+for (let i = 0; i < radioButton.length; i++) {
+  radioButton[i].addEventListener("change", () => {
+
+    for (let j = 0; j < labelModal.length; j++) {
+     labelModal[j].style.display = "none";
+    }
+    
+    if (radioButton[i].checked) {
+      labelModal[i].style.display = "block";
+    }
+  });
 }
-
-// Call the function to create the pledge input element
-createPledgeInput();
-
-const showRadio = document.querySelectorAll('.showRadio')[0];
-showRadio.addEventListener('change', () => {
-  console.log('Button clicked'); 
-  const label = document.getElementById('pledgeLabel');
-  const input = document.getElementById('pledgeAmount');
-
-
-  if (showRadio.checked) { // Check if radio button is checked
-    label.classList.remove('hidden');
-    input.classList.remove('hidden');
-  } else {
-    label.classList.add('hidden');
-    input.classList.add('hidden');
-  }
-});
 
 //menu
 
