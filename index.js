@@ -1,7 +1,6 @@
 const modal = document.getElementById("modal");
 const openModal = document.getElementById("openModal");
 const modalWrapper = document.getElementById("modalWrapper");
-const noReward = document.getElementById("noReward");
 const continueBtn = document.getElementsByClassName("continueBtn");
 const thankyouModal = document.getElementById("thankyou");
 const closebtn = document.getElementById("closebtn");
@@ -9,10 +8,9 @@ const gotIt = document.getElementById("closeThankyou");
 const thankyouWrapper = document.getElementById("thankyouWrapper");
 let bookmark = document.getElementById("bookmark");
 let bookmark_text = document.querySelector(".bookmark");
-const labels = document.querySelectorAll("label");
-const menuToggle = document.getElementById('menuToggle');
-const closeMenu = document.getElementById('closeMenu');
-const menu = document.querySelector('.menu ul');
+const closeMenu = document.getElementById("close_Menu");
+const menuToggle = document.getElementById("menuToggle");
+const menuHamburger = document.getElementById("menuHamburger");
 
 //opens the modal
 openModal.onclick = function () {
@@ -48,23 +46,52 @@ bookmark.addEventListener("click", () => {
     : (bookmark_text.innerText = "Bookmark");
 });
 
-//Pledge input modal pop-up
+ function createPledgeInput() {
+  const label = document.createElement('label');
+  const labelText = document.createTextNode('Enter your pledge');
+  const input = document.createElement('input');
+
+  label.appendChild(labelText);
+  label.classList.add('hidden');  input.type = 'number';
+  input.id = 'pledgeAmount';
+  input.placeholder = '$ 25';
+  input.classList.add('hidden');  
+  
+  const container = document.getElementById('pledge-no--reward');
+  container.appendChild(label);
+  label.appendChild(input);
+
+}
+
+// Call the function to create the pledge input element
+createPledgeInput();
+
+const showRadio = document.querySelectorAll('.showRadio')[0];
+showRadio.addEventListener('change', () => {
+  console.log('Button clicked'); 
+  const label = document.getElementById('pledgeLabel');
+  const input = document.getElementById('pledgeAmount');
 
 
+  if (showRadio.checked) { // Check if radio button is checked
+    label.classList.remove('hidden');
+    input.classList.remove('hidden');
+  } else {
+    label.classList.add('hidden');
+    input.classList.add('hidden');
+  }
+});
 
+//menu
 
-
-//menu toggle
 menuToggle.addEventListener('click', () => {
-  menu.classList.toggle('active'); // Toggle active class on the menu list
-  menuToggle.classList.toggle('hidden'); // Toggle hidden class on the menuToggle (optional for styling)
-  closeMenu.classList.toggle('active'); // Toggle active class on the closeMenu icon
+  menuToggle.style.display = 'none';
+  closeMenu.style.display = 'block';
+  menuHamburger.style.display = 'block';
 });
 
 closeMenu.addEventListener('click', () => {
-  menu.classList.remove('active'); // Remove active class from the menu list
-  menuToggle.classList.remove('hidden'); // Remove hidden class from menuToggle (optional for styling)
-  closeMenu.classList.remove('active'); // Remove active class from closeMenu icon
+  closeMenu.style.display = 'none';
+  menuToggle.style.display = 'block';
+  menuHamburger.style.display = 'none';
 });
-
-

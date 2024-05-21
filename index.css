@@ -18,9 +18,6 @@
   .container{
        max-width: 1200px;
        width: 100%;
-       /* display: flex;
-       justify-content: center;
-       align-items: center; */
        flex-direction: column;
        z-index: 1;
        margin: auto;
@@ -30,7 +27,6 @@
     color: #777777;
     font-family: 'Commissioner', sans-serif;
     font-weight: 400;
-    /* text-align: center; */
     display: block;
     line-height: 1.5;
     width: 100%;
@@ -70,6 +66,11 @@
 .menu ul{
  margin-top: 5rem
 }
+
+.open, .close{
+  display: none;
+}
+
 .logo{
  margin-top: 5rem;
 }
@@ -110,45 +111,6 @@
  text-align: center;
 }
 
-/* .buttondiv{
-   display: flex;
-  justify-content: space-between;
-  column-gap: 50rem;
-   margin-top: 2rem;
-   padding-bottom: 1rem;
-   margin: 2rem;
-   height: 60px;
-
-}
-.Intro .button1{
-    padding: 15px 30px;
-    border-radius: 40px;
-    color: white;
-    border: transparent;
-    background-color: hsl(176, 50%, 47%);
-}
-
-.Intro .button1:hover{
-   cursor: pointer;
-   background-color: hsl(176, 72%, 28%);
-}
-
- .Intro .button2{
-    padding: 10px 30px;
-    border-radius: 40px;
-    color: white;
-    border: transparent;
-    background-color: #3ab5aa;
- }
-
-.Intro .button2:hover{
-  cursor: pointer;
-  background-color: lightgray
-}
-.button2 span{
-  margin-right: 10px;
-} */
-
 .Intro .buttondiv {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -159,16 +121,18 @@
           flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center;
+          justify-content: space-between;
+          row-gap: 80rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   gap: 2em;
-  width: 30%;
-  padding: 1rem 0 1.5rem 0;
+  width: 70%;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
-.Intro .buttondiv button {
+.Intro .buttondiv button{
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,33 +148,35 @@
           align-items: center;
   border-radius: 40px;
 }
-  .Intro .buttondiv button:first-child{
+  .Intro .buttondiv button{
   border: none;
   color: #fff;
   font-family: 'Commissioner', sans-serif;
   font-weight: bold;
   text-align: center;
   font-size: 0.8rem;
-  width: 70%;
-  padding: 1.5em;
+  width: 100%;
+  padding: 0;
   background-color: #3ab5aa;
 }
+.Intro .buttondiv .button1{
+ height: 4rem;
+ width: 8rem;
+}
+.Intro .button1:hover{
+  cursor: pointer;
+  background-color: hsl(176, 72%, 28%);
+}
 
-.Intro .buttondiv button button:last-child {
-  width: auto;
-  background-color: transparent;
+.Intro .button2:hover{
+  cursor: pointer;
+  background-color: lightgray
 }
 
 .Intro .buttondiv button span {
   display: block;
 }
 
-.button2 img {
-  margin-right: 5px; 
-  vertical-align: middle; 
-  width: auto;
-  height: 100%; 
-}
 .stats{
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
@@ -387,16 +353,32 @@ background-color: hsl(176, 72%, 28%);
   color: hsl(176, 72%, 28%);
 }
 
+label {
+  display: flex;
+  align-items: center; 
+  padding: 0.5em 1em
+}
+
+
 .Bamboo-pledge--modal p{
   padding: 1rem;
   color: grey;
  }
+
+  .pledge-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-wrap: nowrap;
+}
+
 
 .Black-edition--modal{
   box-shadow: 0 0 0.5em rgb(0 0 0 / .3);
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .Black-edition--modal:hover{
@@ -419,6 +401,7 @@ background-color: hsl(176, 72%, 28%);
   border-radius: 0.5rem;
   background-color: white;
   margin-top: 2rem;
+  padding: 1rem;
 }
 
 .Mahogany-edition--modal:hover{
@@ -463,6 +446,10 @@ background-color: hsl(176, 72%, 28%);
     margin-top: 10rem;
    }
 
+   .hidden {
+    display: none;
+   }
+
    .closebtn{
     float: right;
     cursor: pointer;
@@ -482,11 +469,47 @@ background-color: hsl(176, 72%, 28%);
   position: relative;
 }
 
-.menu ul {
-  margin-top: 0; 
-  display: flex;
-flex-direction: column;
+ .menu{
+  position: absolute;
+  top: 1rem;
+  right: 0px;
+  background-color: #ffffff;
+  width: 80%;
+  /* margin-top: 0; */
+  margin: 2rem 2rem; 
+  display: none;
+  border-radius: 5px;
+  z-index: 99;
+  height: 13rem;
+  backdrop-filter: blur(50px);
+} 
+.menu ul li{
+  display: block;
+  padding: 10px;
+  font-size: 20px;
 }
+
+.menu ul li a{
+  color: black;
+  padding-left: 7px;
+  font-weight: bold;
+}
+
+.open, .close{
+  display: block;
+  cursor: pointer;
+}
+.close {
+  position: absolute;
+  display: none;
+  right: 20px;
+}
+
+hr{
+  border: 0; 
+  height: 1px; 
+  background-color: #ddd;
+ }
 
 .logo {
   margin-top: 0;
@@ -494,13 +517,13 @@ flex-direction: column;
 
 .page1 {
   width: 100%;
-  margin-top: 10rem;
+  margin-top: 13rem;
 }
 
 .Intro .buttondiv {
   flex-direction: row; 
   align-items: center; 
-  gap: 1rem; 
+  row-gap: 1rem; 
   width: 80%;
   padding: 1rem 0;
 }
@@ -540,7 +563,24 @@ flex-direction: column;
 .editions {
   padding: 1rem; 
 }
+.editions {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.editions > div {  
+  flex: 1 0 50%; 
+  margin: 10px; 
+}
+
+/* Targets all inner elements within .editions > div */
+.editions > div > * {
+  flex-direction: column; 
+}
+#pledgespan {
+  padding: 0;
+  margin: 0; 
+}
 .About-project .heading3 {
   padding: 1rem;
 }
@@ -555,52 +595,6 @@ flex-direction: column;
     width: 80%; 
   }
 
-/*menu*/
- .container{
-  position: relative;
 
- }
 
- .menu {
-  position: absolute;
-  top: 0;
-  right: 0; 
-  background-color: white; 
-  list-style: none; 
-  padding: 0;
-  margin: 2rem 2rem; 
-  display: none; 
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
-} 
-
-.menu.active { 
-  display: block; 
-}
-
-.menu li {
-  padding: 1rem;
-}
-
-.menu a {
-  text-decoration: none; 
-  color: #333;
-}
-
-.open {
-  width: 40px; /* Set a width for the icon */
-  height: 40px; /* Set a height for the icon */
-  position: absolute; /* Position the icon absolutely within container (optional) */
-  top: 1rem; /* Add some top padding for spacing */
-  right: 1rem; /* Add some right padding for spacing */
-  cursor: pointer; /* Set cursor to pointer on hover */
-  /* Add your desired styles for the hamburger icon (lines, color, etc.) */
-}
-.close {
-  display: block;
-}
-
-.menu.active .close {
-  /* Styles for the close menu icon when menu is active (replace with your styles) */
-  display: block;
-}
 }
