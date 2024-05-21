@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/WangariNelly/CrowdFunding-Product-Page]
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://crowd-funding-product-page-58n2sgub2-nelly-wangaris-projects.vercel.app/]
 
 ## My process
 
@@ -44,8 +44,7 @@ Users should be able to:
 - Flexbox
 - CSS Grid
 - Vanilla Javascript
-f when you look back on this project in the future.**
 
 ## Author
 
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
+- Frontend Mentor - [@WangariNelly] [https://www.frontendmentor.io/profile/WangariNelly]

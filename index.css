@@ -58,9 +58,12 @@
   list-style-type: none;
   display: inline-block;
   padding: 1rem;
-  color: white;
   font-weight: 700;
   font-size: 16px;
+}
+
+.menu ul li a{
+  color: white;
 }
 
 .menu ul{
@@ -70,7 +73,9 @@
 .open, .close{
   display: none;
 }
-
+hr{
+  display: none;
+}
 .logo{
  margin-top: 5rem;
 }
